@@ -1,3 +1,5 @@
+Fork of knoxell/certbot-dns-namecheap (itself a fork), to auto-build a Docker image that can be downloaded
+
 Not affiliated
 
 # Why this FORK?
