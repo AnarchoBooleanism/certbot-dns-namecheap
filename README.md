@@ -1,4 +1,24 @@
-Fork of knoxell/certbot-dns-namecheap (itself a fork), to auto-build a Docker image that can be downloaded (everything below is unmodified from upstream)
+Fork of knoxell/certbot-dns-namecheap (itself a fork), to auto-build a Docker image that can be downloaded
+
+NOTE: It seems that this should generally work with the latest version of Certbot, so updating the base Docker image should work fine
+
+To use this interactively in a container, make sure you've followed the steps below first, then run this command (again, remove `--dry-run` if you want this to create an actual certificate for production):
+```bash
+docker run -it --rm \
+  -v $(pwd)/certs:/etc/letsencrypt \
+  -v $(pwd)/logs:/var/log/letsencrypt \
+  -v $(pwd)/namecheap.ini:/namecheap.ini \t
+  ghcr.io/anarchobooleanism/certbot-dns-namecheap certonly \
+  -a dns-namecheap \
+  --dns-namecheap-credentials=/namecheap.ini \
+  --agree-tos \
+  --no-eff-email \
+  --email "your@mail.com" \
+  -d example.com \
+  --dry-run
+```
+
+(everything below is unmodified from upstream)
 
 Not affiliated
 
