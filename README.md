@@ -1,4 +1,4 @@
-Fork of knoxell/certbot-dns-namecheap (itself a fork), to auto-build a Docker image that can be downloaded
+Fork of knoxell/certbot-dns-namecheap (itself a fork), to auto-build a Docker image that can be downloaded (everything below is unmodified from upstream)
 
 Not affiliated
 
