@@ -1,4 +1,4 @@
-FROM certbot/certbot:v5.3.0
+FROM certbot/certbot:v5.3.1
 
 COPY . src/certbot-dns-namecheap
 
